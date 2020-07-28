@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap');
+@import "reset.css";
+
+/* ...Colors... */
+:root {
+    --primary-color: #023569;
+    --secondary-color: #ced5db;
+    --red: #DD403A;
+    --blue: #007ec3;
+    --gray: #f4f4f4;
+}
+
+/* ...Body... */
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'PT Sans', sans-serif;
+    background-repeat: repeat;
+    color: var(--primary-color);
+}
+
+/* ...Container... */
+.container {
+    text-align: center;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+/* ...  Navigation ... */
+h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+nav {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+nav a p {
+    margin-top: 0;
+}
+
+nav a img {
+    width: 25px;
+    height: 25px;
+}
+
+/* ... Small Header ... */
+p, span {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: var(--red);
+}
+
+/* ... Search form ... */
+.search-form {
+    display: none;
+    width: 400px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    border: solid 1px var(--secondary-color);
+    margin: 15px auto;
+}
+
+.toggle-search-form {
+    display: block;
+}
+
+.search-form .close {
+    justify-self: end;
+}
+
+.search-form label {
+    justify-self: start;
+}
+
+/* ... Close buttons ... */
+.close {
+    width: 25px;
+    height: 25px;
+}
+
+/* ... Form ... */
+form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+input {
+    height: 30px;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-size: 1.3rem;
+    border: 1px solid var(--secondary-color);
+}
+
+input:focus {
+    border: 1px solid var(--red);
+    transition: 0.3s ease;
+    outline: none;
+}
+
+/* ...Button style... */
+button {
+    width: 150px;
+    padding: 5px;
+    border-radius: 2px;
+    justify-self: center;
+    background-color: white;
+    color: var(--blue);
+    border: 1px solid var(--blue);
+}
+
+button:hover {
+    background-color: var(--blue);
+    color: white;
+    transition: 0.3s ease;
+}
+
+/* ...Add form... */
+.add-form, .update-form {
+    margin: auto;
+    width: 500px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: left;
+    border: solid 1px var(--secondary-color);
+}
+
+.add-form {
+    margin-bottom: 15px;
+}
+
+.update-form {
+    margin-bottom: 15px;
+}
+
+.update-form .close {
+    justify-self: end;
+}
+
+.upload-form, .upload-form-modal {
+    padding: 15px;
+    border: solid 1px var(--secondary-color);
+    border-radius: 2px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: 1fr 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.upload-form-modal {
+    grid-template-rows: auto;
+}
+
+#image {
+    width: 200px;
+    height: 200px;
+}
+
+/* ...Back button... */
+.back {
+    height: 25px;
+    width: 25px;
+}
+
+/* ...Content... */
+.results div {
+    border-top: 1px solid var(--gray);
+}
+
+.header p {
+    font-weight: bold;
+}
+
+.header, .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 10px;
+}
+
+.content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.results div:nth-of-type(6) {
+    margin-bottom: 0;
+}
+
+.content p {
+    text-transform: none;
+}
+
+/* ...Link... */
+a span {
+    padding: 5px;
+    color: var(--blue);
+    border-radius: 2px;
+    border: 1px solid var(--blue);
+}
+
+a span:hover {
+    background-color: var(--blue);
+    color: white;
+    transition: 0.3s ease;
+}
+
+/* ...Pagination... */
+.pagination-container {
+    display: block;
+    margin: 15px;
+}
+
+.pagination {
+    list-style-type: none;
+    padding: 10px 0;
+    display: inline-flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.pagination li {
+    box-sizing: border-box;
+}
+
+.pagination li a span {
+    box-sizing: border-box;
+    padding: 5px;
+    text-decoration: none;
+    color: var(--blue);
+    border-radius: 2px;
+}
+
+.pagination li a span:hover {
+    background-color: var(--blue);
+    color: white;
+}
+
+.pagination .next a span, .pagination .prev a span {
+    text-transform: uppercase;
+}
+
+.pagination .currentpage a span {
+    background-color: var(--blue);
+    color: white;
+}
+
+.main-image {
+    height: 50px;
+    width: 50px;
+}
+
+/* ...Message... */
+.message {
+    margin: 15px auto;
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--red);
+    background: white;
+    border: 1px solid var(--red);
+    width: 30%;
+    text-align: center;
+}
+
+/* ...Modal... */
+.modal {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.modal-content {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.toggle-modal {
+    display: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-menu {
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid var(--gray);
+}
+
+.login-form, .register-form {
+    margin: auto;
+    width: 500px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: left;
+    border: solid 1px var(--secondary-color);
+}
+
+.delete-form {
+    margin: auto;
+    width: 350px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    border: solid 1px var(--secondary-color);
+}
