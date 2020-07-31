@@ -1,4 +1,4 @@
-# Inventory Tracker
+# Inventory tracker
 
 App to track items in inventory, results are divided by pages, number of items per page can be set from config file.
 Items can be ordered by name, quantity, price, mod-date, add-date, default order is add-date and it can also be changed from config file.
